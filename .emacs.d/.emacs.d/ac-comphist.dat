@@ -1,0 +1,42 @@
+((("course" .
+   [1 0 0 0 0 0])
+  ("shell-command" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("PassCodeToWeave" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 \.\.\.])
+  ("kbd" .
+   [1 0 0])
+  ("local-set-key" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 \.\.\.])
+  ("interactive" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("poly-noweb+python-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 \.\.\.])
+  ("python" .
+   [1 0 0 0 0 0])
+  ("julia-mode" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("require" .
+   [0 0 0 0 0 0 1])
+  ("add-hook" .
+   [1 0 0 0 0 0 0 0])
+  ("poly-noweb+ess-julia-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("julia" .
+   [1 0 0 0 0])
+  ("concat" .
+   [2 0 0 0 0 0])
+  ("buffer-file-name" .
+   [1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1])
+  ("ess-command" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("setq" .
+   [2 0 0 0])
+  ("m" .
+   [1])
+  ("message" .
+   [0 0 0 0 0 0 1])
+  ("s" .
+   [1])
+  ("Weave-tex-filename" .
+   [0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0])))
