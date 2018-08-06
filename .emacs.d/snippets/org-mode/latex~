@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: ORG-LATEX
+# key: latex
+# --
+#+BEGIN_LaTeX latex
+\begin{$1}
+$2
+\end{$1}
+#+END_LaTeX latex

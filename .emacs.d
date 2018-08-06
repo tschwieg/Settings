@@ -1,1 +1,0 @@
-/home/tschwieg/.emacs.d

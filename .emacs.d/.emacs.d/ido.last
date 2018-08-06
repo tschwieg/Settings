@@ -1,0 +1,146 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/tschwieg/Classes/Econometrics/Notes/" . "ThreeQ/")
+ ("/home/" . "tschwieg/")
+ ("/home/tschwieg/Classes/Econometrics/" . "Notes/")
+ ("/home/tschwieg/Classes/" . "Econometrics/")
+ ("/home/tschwieg/Classes/Behavioral/" . "HW2/")
+ ("/home/timothy/School/Classes/Micro1/" . "HW2/")
+ ("/home/timothy/School/Classes/Behavioral/" . "HW2/")
+ ("/home/timothy/School/Classes/Econometrics/Notes/" . "AirConditioning/")
+ ("/home/timothy/School/Classes/Econometrics/" . "HW2/")
+ ("/home/timothy/School/Classes/BusAnal/Project/" . "SQL/")
+ ("/home/timothy/School/Classes/BusAnal/" . "Project/")
+ ("/home/timothy/School/Classes/" . "Behavioral/")
+ ("/home/timothy/" . "School/")
+ ("/home/timothy/School/" . "Classes/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/tschwieg/SCIP/include/symmetry/"
+ "/home/tschwieg/TA/"
+ "/home/tschwieg/Classes/Econometrics/Notes/ThreeQ/"
+ "/home/tschwieg/Classes/Behavioral/"
+ "/home/tschwieg/"
+ "/home/tschwieg/Classes/Econometrics/HW3/"
+ "/home/tschwieg/Classes/Econometrics/"
+ "/home/tschwieg/Classes/Econometrics/HW2/"
+ "/home/tschwieg/Classes/Behavioral/HW2/"
+ "/home/timothy/"
+ "/home/timothy/School/Classes/Behavioral/HW2/"
+ "/home/timothy/School/Classes/Behavioral/"
+ "/home/timothy/School/Classes/Econometrics/HW2/"
+ "/home/timothy/School/Classes/Econometrics/"
+ "/home/timothy/School/Classes/Micro1/HW2/"
+ "/home/timothy/School/Classes/Econometrics/Notes/AirConditioning/"
+ "/home/timothy/School/Classes/BusAnal/Project/SQL/"
+ "/home/timothy/Downloads/"
+ "/home/timothy/School/EmacsKeys/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "type_symmetry.h"
+ "GroupSorter.py"
+ "questions.Jtex"
+ "Syllabus.pdf"
+ "questions.tex"
+ ".emacs"
+ "hw3.Rnw"
+ "hw2.pdf"
+ "Schwieg_HW2_Behavioral.pdf"
+ ".bashrc"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/tschwieg/SCIP/include/symmetry/" (23153 4206 26295 470000) "../" "type_symmetry.h" "compute_symmetry.h" "./")
+
+ ("/home/tschwieg/Classes/Behavioral/HW2/" (23147 47448 845857 983000) "hw2.aux" "graph.pdf" "../" "auto/" "Rplots.tex" "hw2.tex" "GameTheoryPrimer.pdf" "hw2.log" "1bp1.tex" ".Rhistory" "Schwieg_HW2_Behavioral.pdf" "./" "hw2Graph.r")
+
+ ("/home/tschwieg/Classes/Econometrics/HW2/" (23149 1224 4598 640000) "test.txt" "hw2.aux" ".RData" "Galton.dat" "Hists.pdf" "../" "hw2.pdf" "auto/" "hw2.r.Rout" "Fathers.pdf" "hw2.r" "hw2.tex" "DaugherSonEDFs.pdf" "FatherSonEDF.pdf" "EDFs.pdf" "figure/" "hw2.Rnw" "Rplots.pdf" "./")
+
+ ("/home/tschwieg/Classes/Econometrics/HW3/" (23148 63359 676612 540000) "hw3.tex" "_minted-hw3/" "hw3.Rnw~" "Galton.dat" "hw3.Rnw" "hw3.pdf" "../" "auto/" "texput.log" "#hw3.Rnw#" "hw3.aux" "./" "hw3.log")
+
+ ("/home/tschwieg/" (23152 50044 501349 411000) ".xsession-errors" "Music/" ".ICEauthority" "julia/" ".tmux.conf" ".zshrc~" "Classes/" ".gconf/" "Public/" ".profile" ".Xauthority" ".tmux/" ".wget-hsts" "Pictures/" "DumbShit/" ".gnupg/" ".python_history" "Videos/" ".bashrc~" ".julia_history" "../" ".git/" ".emacs~" ".config/" "Desktop/" ".local/" ".bash_logout" ".zsh-update" "R/" "Downloads/" ".zshenv" "julia-d386e40c17/" ".zshrc" ".cache/" ".emacsPrinter.r" ".cinnamon/" ".julia/" ".cmake/" "TA/" "Documents/" "ESS/" ".xsession-errors.old" ".mozilla/" ".texlive2016/" ".kde/" ".emacs.d/" ".bashrc" ".dmrc" "Templates/" "settings/" "./" ".pylintrc" ".bash_history" ".emacs")
+
+ ("/home/tschwieg/Classes/Econometrics/Notes/ThreeQ/" (23152 35173 993913 834000) "questions.Jtex" ".juliahistory" "questions.pdf" "../" "questions.tex~" "auto/" "questions.Jtex~" "questions.tex" "_minted-questions/" "questions.aux" "questions.log" "figures/" "./")
+
+ ("/home/tschwieg/TA/" (23152 52300 168853 240000) "ECO3401Team39/" "ECO3401Team47/" "ECO3401Team81/" "CanvasGrader.py" "ECO3401Team121/" "ECO3401Team78/" "ECO3401Team131/" "ECO3401Team125/" "ECO3401Team115/" "ECO3401Team127/" "ECO3401Team4/" "ECO3401Team98/" "ECO3401Team57/" "ECO3401Team137/" "ECO3401Team133/" "ECO3401Team105/" "ECO3401Team59/" "ECO3401Team24/" "ECO3401Team134/" "ECO3401Team66/" "ECO3401Team88/" "ECO3401Team132/" "Pipfile" "ECO3401Team89/" "ECO3401Team104/" "ECO3401Team40/" "ECO3401Team79/" "ECO3401Team16/" "ECO3401Team41/" "newGrades.csv" "ECO3401Team100/" "ECO3401Team122/" "ECO3401Team25/" "ECO3401Team118/" "ECO3401Team65/" "ECO3401Team31/" "ECO3401Team5/" "ECO3401Team53/" "ECO3401Team107/" "ECO3401Team20/" "ECO3401Team109/" "ECO3401Team139/" "ECO3401Team8/" "Pipfile.lock" "ECO3401Team76/" "ECO3401Team2/" "ECO3401Team126/" ".#CanvasGrader.py" "ECO3401Team15/" "ECO3401Team99/" "ECO3401Team74/" "gradeUpdater.r" "ECO3401Team93/" "ECO3401Team114/" "ECO3401Team10/" "ECO3401Team51/" "ECO3401Team13/" "ECO3401Team110/" "ECO3401Team77/" "ECO3401Team106/" "ECO3401Team14/" "ECO3401Team29/" "ECO3401Team102/" "ECO3401Team27/" "ECO3401Team32/" "ECO3401Team1/" "ECO3401Team112/" "ECO3401Team136/" "ECO3401Team130/" "ECO3401Team97/" "ECO3401Team101/" "ECO3401Team123/" "ECO3401Team82/" "ECO3401Team22/" "../" "precase2.csv" "ECO3401Team83/" "ECO3401Team80/" "ECO3401Team71/" "ECO3401Team63/" "CanvasGrader.py~" "ECO3401Team70/" "ECO3401Team111/" "ECO3401Team108/" "gradeUpdaer.r~" "ECO3401Team34/" "ECO3401Team90/" "ECO3401Team140/" "ECO3401Team73/" "ECO3401Team92/" "ECO3401Team96/" "precase2.csv~" "precase1.csv" "ECO3401Team33/" "ECO3401Team62/" "ECO3401Team120/" "ECO3401Team50/" "ECO3401Team26/" "ECO3401Team36/" "ECO3401Team23/" "ECO3401Team35/" "ECO3401Team67/" "Team141/" "ECO3401Team68/" "ECO3401Team18/" "ECO3401Team11/" "ECO3401Team49/" "ECO3401Team19/" "ECO3401Team21/" "ECO3401Team87/" "ECO3401Team103/" "ECO3401Team6/" "ECO3401Team55/" "ECO3401Team46/" "ECO3401Team61/" "ECO3401Team45/" "ECO3401Team91/" "ECO3401Team124/" "ECO3401Team138/" "ECO3401Team84/" "ECO3401Team37/" "ECO3401Team3/" "ECO3401Team58/" "#CanvasGrader.py#" "ECO3401Team94/" "ECO3401Team116/" "ECO3401Team60/" "#gradeUpdater.jl#" "ECO3401Team7/" "ECO3401Team72/" "ECO3401Team43/" "ECO3401Team48/" "ECO3401Team17/" "ECO3401Team64/" "ECO3401Team54/" "students/" "grades.csv" "ECO3401Team69/" "ECO3401Team38/" "ECO3401Team117/" "ECO3401Team42/" "ECO3401Team86/" "ECO3401Team85/" "ECO3401Team129/" "ECO3401Team75/" "ECO3401Team113/" "ECO3401Team56/" "ECO3401Team9/" "ECO3401Team30/" "ECO3401Team119/" "./" "ECO3401Team128/" "ECO3401Team95/" "ECO3401Team52/" "ECO3401Team28/" "ECO3401Team44/" "ECO3401Team12/" "ECO3401Team135/")
+
+ ("/home/tschwieg/Classes/Econometrics/Notes/DistBoy/" (23151 37935 45368 132000) ".juliahistory" "dist.pdf" "dist.Jtex" "../" "auto/" "dist.tex" "_minted-dist/" "texput.log" "dist.Jtex~" "dist.dvi" "estimate.jl" "./" "dist.aux" "dist.log")
+
+ ("/home/tschwieg/Classes/Behavioral/HW3/" (23152 33678 954381 303000) "hw3.tex" "hw3.tex~" "_region_.prv/" "hw3.pdf" "../" "auto/" "_region_.tex" "prv_hw3.log" "hw3.aux" "./" "_region_.log" "hw3.log")
+
+ ("/home/tschwieg/Classes/Behavioral/" (23151 42364 135625 721000) "Syllabus.pdf" "HW3/" "../" "HW2/" "HW1/" "./")
+
+ ("/home/tschwieg/Classes/Econometrics/Notes/" (23151 37965 1366 256000) "RandQuests/" "DistributionCheatSheet/" "../" "DistBoy/" "AirConditioning/" "./" "ThreeQ/")
+
+ ("/home/tschwieg/.emacs.d/" (23149 1555 772224 787000) ".python-environments/" "ergoemacs-extras/" "recentf" "recentf~" "abbrev_defs" "../" "ac-comphist.dat" "auto-complete-auctex/" "company-statistics-cache.el" "ido.last" "snippets/" "layouts/" "places" "ido.last~" "elpa/" "./" "auto-save-list/")
+
+ ("/home/tschwieg/.emacs.d/elpa/" (23149 1529 299932 811000) "ess-view-readme.txt" "yasnippet-snippets-20180122.521/" "pydoc-info-readme.txt" "jedi-core-readme.txt" "highlight-indentation-20171218.137/" "smex-readme.txt" "ess-smart-equals-readme.txt" "highlight-symbol-20160102.1209/" "pydoc-readme.txt" "icicles-20170917.942/" "eldoc-overlay-readme.txt" "pdf-tools-20180109.1234/" "python-0.25.2.signed" "eldoc-overlay-20171219.140/" "latex-extra-20170816.1847/" "inline-docs-20170522.2150/" "imenu-list-20171120.1255/" "realgud-old-debuggers-readme.txt" "python-mode-readme.txt" "smartparens-20180126.1611/" "math-symbol-lists-20170221.553/" "company-auctex-20161025.24/" "loc-changes-20160801.1008/" "highlight-readme.txt" "concurrent-20161228.1930/" "yasnippet-20180124.1445/" "company-try-hard-readme.txt" "smex-20151212.1409/" "eval-in-repl-readme.txt" "projectile-20180118.745/" "magit-readme.txt" "window-number-readme.txt" "ac-js2-readme.txt" "el-get-readme.txt" "sql-indent-20170112.1507/" "frame-cmds-readme.txt" "icicles-readme.txt" "projectile-readme.txt" "highlight-symbol-readme.txt" "realgud-20180115.127/" "auctex-12.1.0/" "tablist-20170219.1935/" "archives/" "company-math-1.3/" "windresize-0.1.signed" "window-layout-readme.txt" "pydoc-info-20110301.34/" "highlight-thing-readme.txt" "sublimity-readme.txt" "ivy-20180124.1127/" "highlight-thing-20170919.704/" "epl-20180127.351/" "company-20180123.1315/" "eldoc-eval-readme.txt" "pos-tip-readme.txt" "paredit-20171126.1805/" "windresize-readme.txt" "frame-mode-readme.txt" "latex-extra-readme.txt" "ace-window-20180123.1111/" "vlf-readme.txt" "company-irony-readme.txt" "flycheck-20180123.1419/" "pos-tip-20150318.813/" "dash-20180118.743/" "auto-complete-readme.txt" "py-autopep8-20160925.352/" "undo-tree-20170706.246/" "python-0.25.2/" "jedi-core-20170121.610/" "yatemplate-readme.txt" "rainbow-delimiters-20170929.432/" "find-file-in-project-20180125.1859/" "epc-20140609.2234/" "company-statistics-20170210.1133/" "rainbow-delimiters-readme.txt" "seq-2.20/" "company-jedi-readme.txt" "folding-20170925.838/" "python-x-20171006.336/" "el-get-20180126.1603/" "ergoemacs-mode-readme.txt" "company-quickhelp-readme.txt" "test-simple-20170527.832/" "company-math-20171016.814/" "python-info-readme.txt" "window+-readme.txt" "pyvenv-20180126.303/" "ess-20180123.1313/" "window-purpose-20171107.659/" "window-purpose-readme.txt" "pyenv-mode-readme.txt" "python-readme.txt" "python-x-readme.txt" "sqlite-readme.txt" "eval-in-repl-20171122.543/" "frames-only-mode-readme.txt" "f-20180106.122/" "sql-indent-readme.txt" "pythonic-20171219.810/" "auto-complete-20170124.1845/" "highlight-20180125.1126/" "gnupg/" "ivy-readme.txt" "popup-20160709.729/" "pyenv-mode-20170801.1648/" "let-alist-1.0.5.signed" "quick-peek-20170327.27/" "pkg-info-20150517.443/" "sqlplus-readme.txt" "windwow-readme.txt" "window-end-visible-readme.txt" "direx-readme.txt" "seq-2.20.signed" "yasnippet-snippets-readme.txt" "py-autopep8-readme.txt" "flyspell-correct-readme.txt" "load-relative-20170526.310/" "avy-20171230.220/" "sqlup-mode-20170610.837/" "python-mode-20180121.50/" "ergoemacs-mode-20171030.738/" "flycheck-readme.txt" "pydoc-20170429.1158/" "smartparens-readme.txt" "realgud-readme.txt" "pdf-tools-readme.txt" "realgud-rdb2-readme.txt" "yasnippet-readme.txt" "polymode-20170307.322/" "s-20171102.227/" "python-environment-20150310.153/" "deferred-20170901.630/" "sqlup-mode-readme.txt" "auctex-12.1.0.signed" "ergoemacs-status-readme.txt" "let-alist-1.0.5/" "company-jedi-20151216.1921/" "julia-mode-20171116.642/" "ctable-20171005.1711/" "py-yapf-readme.txt" "../" "./")
+
+ ("/home/tschwieg/Classes/Econometrics/Notes/AirConditioning/" (23147 40959 750729 237000) "baron" "test.r" "secondmle.jl" "../" "Proschan.csv" "mle.jl" "./")
+
+ ("/home/tschwieg/Classes/Econometrics/" (23148 60425 396208 952000) "Syllabus.pdf" "HW3/" "../" "HW2/" "HW1/" "Notes/" "HW4/" "./")
+
+ ("/home/" (23147 40146 639148 31000) "tschwieg/" "../" "jeubanks/" "./")
+
+ ("/home/tschwieg/Classes/Econometrics/Notes/RandQuests/" (23147 49767 310366 536000) "../" "test.ptex" ".#test.ptex" "./")
+
+ ("/home/tschwieg/Classes/" (23147 40959 798729 839000) "Micro1/" "settings.emacs" "BusAnal/" ".gitignore" "Behavioral/" "../" ".git/" "workaround.jl" "Econometrics/" "OR/" "./")
+
+ ("/home/timothy/" (23147 38938 43305 664000) "Pictures/" ".texmf-var/" ".wget-hsts" ".tmux.conf" "Downloads/" "R/" ".smex-items" "Videos/" ".oh-my-zsh/" ".fonts/" "Steam/" ".gitconfig" ".sudo_as_admin_successful" ".recentPDF1.pdf" ".xsession-errors.old" "ProjectTest/" ".dbus/" ".virtualenvs/" ".emacsPrinter.r" ".pylintrc" ".recentPDF0.pdf" ".java/" ".jedit/" ".pylintConfig~" ".bashrc" ".recentPDF.pdf" ".compiz/" ".lintr" ".ICEauthority" ".zshenv" "Public/" ".emacs" ".gconf/" "Templates/" ".nano/" "Desktop/" ".pyenv/" "etcher/" ".dotfiles/" ".steampath" "sqlstuff/" ".tmux/" ".temp/" ".recentPDF3.pdf" "Music/" ".Xauthority" ".xsession-errors" ".gitignore~" ".cache/" ".pylint.d/" ".gimp-2.8/" ".bash_history" ".aspell.en.prepl" "Documents/" ".lintr~" ".steampid" "Julia/" ".zsh-update" ".dmrc" ".gnupg/" ".emacs.d/" ".pulse-cookie" ".bash_logout" ".apport-ignore.xml" ".julia/" "School/" ".git/" ".zsh_history" ".emacsPrinter.r~" ".python_history" ".steam/" ".thumbnails/" ".tmux.conf~" ".zshrc~" ".ssh/" ".gnome2/" ".zcompdump" ".config/" ".aspell.en.pws" ".gnome/" ".profile" ".julia_history" ".zshrc" ".zcompdump-timothy-HP-Pavilion-dv7-Notebook-PC-5.1.1" ".recentPDF2.pdf" ".mozilla/" ".gksu.lock" ".emacs~" ".gitignore" ".local/" ".aptitude/" ".sqlite_history" ".pki/" "../" "./")
+
+ ("/home/timothy/School/Classes/Econometrics/Notes/DistBoy/" (23147 38932 699285 119000) "./" "estimate.jl" "dist.log" "dist.aux" "../" "estimate.jl~" "dist.pdf" "auto/" "dist.mdw" "dist.mdw~" "dist.dvi" "_minted-dist/" "dist.tex" "dist.tex~")
+
+ ("/home/timothy/School/Classes/Econometrics/Notes/" (23147 30206 355468 196000) "./" "DistributionCheatSheet/" "../" "DistBoy/" "AirConditioning/")
+
+ ("/home/timothy/School/Classes/Behavioral/HW2/" (23146 23952 679365 979000) "./" "hw2Graph.r" "hw2.aux" "../" "Rplots.tex" "hw2.log" "hw2.pdf" ".Rhistory" "auto/" "hw2.tex" "GameTheoryPrimer.pdf" "1bp1.tex" "graph.pdf" "hw2.tex~")
+
+ ("/home/timothy/School/" (23146 25022 754200 38000) "Classes/" "./" "TA/" "Research/" "EmacsKeys/" "../" "ServerReq" "Papers/" "#test.Rmw#" "Textbooks/")
+
+ ("/home/timothy/School/Classes/Econometrics/HW2/" (23146 19856 914075 916000) "./" "EDFs.pdf" "hw2.Rnw~" "texput.log" "hw2.aux" "hw2.Rnw" "hw2.r" "../" "test.txt" "Hists.pdf" "Fathers.pdf" "figure/" ".RData" "hw2.log" "hw2.pdf" "auto/" "hw2.tex" "DaugherSonEDFs.pdf" "hw2.r.Rout" "Rplots.pdf" "Galton.dat" "hw2.tex~" "FatherSonEDF.pdf")
+
+ ("/home/timothy/School/TA/" (23144 43854 341740 686000) "./" "precase1.csv" "#gradeUpdater.jl#" "precase2.csv" "../" "gradeUpdater.jl" "CanvasGrader.py~" "CanvasGrader.py" "precase2.csv~" "Pipfile" "CanvasGrader/" "Pipfile.lock" ".#gradeUpdater.jl" "grades.csv")
+
+ ("/home/timothy/School/Classes/Micro1/HW2/" (23016 40400 685795 688000) "./" "hw2.aux" "../" "hw2.log" "hw2.pdf" "hw2.tex" "hw2.tex~")
+
+ ("/home/timothy/School/Classes/Micro1/" (23046 7118 304661 420000) "./" "../" "HW1.tex~" "HW2/" "HW3/" "HW1/")
+
+ ("/home/timothy/School/Classes/Behavioral/" (23143 44222 728405 419000) "./" "Syllabus.pdf" "../" "HW2/" "HW1/")
+
+ ("/home/timothy/School/Classes/Econometrics/" (23142 659 343792 873000) "./" "Syllabus.pdf" "../" "HW2/" "Notes/" "HW1/")
+
+ ("/home/timothy/School/Classes/Econometrics/Notes/AirConditioning/" (23138 10809 523661 768000) "./" ".#mle.jl" "mle.jl" "../" "test.r")
+
+ ("/home/timothy/School/EmacsKeys/" (23123 61683 562701 651000) "_region_.prv/" "_region_.log" "./" "prv_sheet.log" "../" "sheet.pdf" "sheet.tex~" "auto/" "sheet.tex" "_region_.tex" "sheet.aux" "_region_.tex~" "sheet.log")
+
+ ("/home/timothy/Downloads/" (23135 32421 117487 822000) "hw6 (2).pdf" "Lecture-07-Integer & Mixed Integer Linear Program-Part_I.pdf" "_ Business post case.docx" "_region_.log" "MICRO-I PS3.pdf" "hw5 (1).pdf" "CrayonCaseArticle_2017ESI5306Project.pdf" "Yael_CS_HW (1).zip" "etcher-1.1.2-linux-x86_64.zip" "LP.tex" "untitled.zip" "listTest.c" "ubuntu-16.04.3-desktop-amd64.iso" "Hw2.1-b40Student.zip" "ECO3401 Syllabus (2).pdf" "pROC_1.10.0.tar.gz" "Lecture-07-Integer & Mixed Integer Linear Program-Part-II.pdf" "S.pdf" "MICRO-I PS1 (2).pdf" "big40-main01.c" "hw5.pdf" "Class exercises2 (1).pdf" "ChrisStub1.jpg" "listTest" "AdvMicro.pdf" "ubuntu-gnome-17.04-desktop-amd64.iso" "production.ppt" "solarized.zip" "[Drew_Fudenberg,_Jean_Tirole]_Game_Theory(BookFi).djvu" "avlTree.c" "Uncertainty lecture notes - 2018 (1).pdf" "Lecture-04-Algebraic Sensitivity Analysis and Duality.pdf" "ProjectImprovement.gms" "Syllabus.pdf" "[Kulkarni_V.G.]_Introduction_to_modeling_and_analy(BookFi).pdf" "Lecture-03-SimplexMethod&BigM&SpecialSolutions.pdf" "prv_Crayon_(1).log" "Lecture-05-Network Flow Models and Algorithms (1).pdf" "_region_.aux" "Crayon.tex" "HW5.tex" "Lecture-08-Queuing (1).pdf" "emacs-25.3.tar.xz" "Lec14_MMsk_Queueing System (1).pdf" "big40.h" "libevent-2.1.8-stable.tar.gz" "Uncertainty lecture notes - 2018.pdf" "desmos-graph.png" "HW3 (1).pdf" "output.txt" "evil.pdf" "big40 (1).c" "Lec14_MMsk_Queueing System.pdf" "atva06.pdf.gz" "Lec12_MM1k_Queueing System2.pdf" "Unconfirmed 260364.crdownload" "HW3.pdf" "auctex-refcard.pdf" "cvxopt-master.zip" "hw6.pdf" "hw5 (3).pdf" "Class exercises2.pdf" "HW3 (3).pdf" "emacs-25.3.tar.gz" "big40-main03.c" "doubleMain.h" "quant error.pdf" "Crayon (1).pdf" "Lecture-07-Integer & Mixed Integer Linear Program-Part-II (2).pdf" "Resized_20171130_191552.jpeg" "desmos-graph (1).png" "mICRO-I PS2.pdf" "MICRO-I PS1.pdf" "Case (2).zip" "operations-research-hw3.zip" "hw6 (1).pdf" "hw2a-2 (1).pdf" "Grades-ECO3401_CMB-17Fall_bad_NID.csv" "output.exe" "ServerReq" "S.tex" "[Drew_Fudenberg,_Jean_Tirole]_Game_Theory(BookFi).pdf" "P9_NLP-0-brief-intro (theory).pdf" "24_Aug_14-01_Grades-ECO3401_CMB-17Fall.csv" "flowchart.png" "P9_NLP-0-brief-intro (theory) (1).pdf" "Etcher-cli-1.1.2-linux-x64.tar.gz" "_region_.pdf" "wv2-0.4.2.tar.bz2" "MICRO-I PS3 (1).pdf" "jehle-better-version.pdf" "Lecture-03-SimplexMethod&BigM&SpecialSolutions (1).pdf" "MICRO-I PS3 (2).pdf" "Exam1_2017Fall (1).pdf" "pandas-0.20.3-cp27-cp27m-manylinux1_x86_64.whl" "SimulationMethods.pdf" "Origianl Post.png" "linkedList" "hw2.pdf" "ChrisStub.jpg" "Crayon (1).tex" "ECO3401 Syllabus (1).pdf" "DoubleLinkedList.h" "DoubleLinkedList.c" "Lecture-02-Linear Programming Models and Graphic Method.pdf" "Crayon (1).log" "evil (1).pdf" "big40-main02.c" "Exam1_2017Fall.pdf" "boot-repair-disk-64bit.iso" "CrayonCaseArticle_2017ESI5306Project (1).pdf" "lp3.pdf" "S.tex~" "HW3 (2).pdf" "ESI5306_2017Fall-syllabus.pdf" "Yael_CS_HW.zip" "_region_.tex" "doubleMain.c" "report2.docx" "MICRO-I PS1 (4).pdf" "hw5 (2).pdf" "MICRO-I PS1 (1).pdf" "Exam2Fall2017-5306.pdf" "Lecture-07-Integer & Mixed Integer Linear Program-Part-II (1).pdf" "a.out" "esi5306_Project proposal_Sample.pdf" "big40.c" "Lecture-02-Linear Programming Models and Graphic Method (1).pdf" "hw6 (3).pdf" "Grades-ECO3401_CMB-17Fall_bad_NID (1).csv" "emacs-25.3/" "Lecture-08-Queuing.pdf" "Lecture-05-Network Flow Models and Algorithms.pdf" "24_Aug_14-04_Grades-ECO3401_CMB-17Fall.csv" "hw2a-2.pdf" "ECO7116 Syllabus - Sp2018.pdf" "MICRO-I PS1 (3).pdf" "Test1.pdf" "Case (1).zip" "Crayon (1).aux" "avlTree.c~" "linkedList.c" "firefox-54.0.1.tar.bz2" "Lecture-04-Algebraic Sensitivity Analysis and Duality (1).pdf" "Response to team member.png" "doubleListX" "Lecture-07-Integer & Mixed Integer Linear Program-Part_I (1).pdf" "Case.zip" "ECO3401 Syllabus.pdf" "ME.R" "hw4-sln.pdf" "Section 8.2 Regular Stochatic Matrices.pptx" "../" "./")
+
+ ("/home/timothy/School/Classes/BusAnal/Project/SQL/" (23135 45618 368205 242000) "./" "output.txt" "../" "CreateIndicatorPY.sql" "CreateTables.sql~" "CreateIndicatorPY.sql~" "CreateTables.sql")
+
+ ("/home/timothy/School/Classes/Econometrics/HW1/" (23136 61706 752869 350000) "_region_.prv/" "_region_.log" "./" "prv_hw1.log" "hw1.tex" "hw1.tex~" "hw1.aux" "hw1.pdf" "hw1.log" "../" "auto/" "_region_.tex" ".#hw1.tex" "#hw1.tex#")
+
+ ("/home/timothy/sqlstuff/" (23135 46186 215986 856000) "./" "../" "test.sql" "sqlserver-query.el")
+
+ ("/home/timothy/School/Classes/BusAnal/Project/" (23075 5606 230138 266000) "./" "RunScripts.sh" "csvs/" "PDF/" "TableInfo.txt" "xgboost.model" "PDF (copy)/" "Rscripts/" "output.txt" "../" "Python/" "SQL/" "test.db" "Models/" "Buildme.sh" "Rplots.pdf")
+
+ ("/home/timothy/School/Classes/BusAnal/InClass/CurrencyEx/" (23129 5571 318909 421000) "_region_.log" "./" "../" "test.r~" "#pySim.py#" ".Rhistory" "Hoffman-SchwiegBankTheftEstimator.rds" "pySim.py" "_region_.tex" ".ropeproject/" "prv_<none>.log" "test.r" "Rplots.pdf")
+
+ ("/home/timothy/School/Classes/Behavioral/HW1/" (23127 30620 899396 252000) "_region_.prv/" "_region_.log" "./" "graphmaker.r" "prv_hw1.log" "hw1.tex" "hw1.tex~" "hw1.aux" "hw1.pdf" "Question1b.pdf" "hw1.log" "../" "Question1c.pdf" ".Rhistory" "auto/" "_region_.tex" "Question1a.pdf" "graphmaker.r~")
+
+ ("/home/timothy/.emacs.d/" (23126 17433 410450 519000) "./" "layouts/" "ido.last" "recentf~" "auto-complete-auctex/" "places" "ergoemacs-extras/" "abbrev_defs" "../" "recentf" "ido.last~" "snippets/" "auto-save-list/" "ac-comphist.dat" "company-statistics-cache.el" "elpa/" "image-dired/" ".python-environments/")
+
+ ("/home/timothy/School/Classes/BusAnal/InClass/" (23124 58205 871574 443000) "./" "InClassSim/" "inclassOne.r" "datagen.txt" "../" "InclassOutput.txt" "inclassOne.r~" "Hoffman-SchwiegBankTheftEstimator.rds" "InClassTwo.py" "InClassTwo.py~" "CurrencyEx/")
+
+ ("/home/timothy/School/Classes/" (23114 53603 886410 759000) "./" "OR/" "../" "workaround.jl" "BusAnal/" "Micro2/" "Behavioral/" ".git/" "Micro1/" "Econometrics/" ".gitignore" "settings.emacs")
+
+ ("/home/timothy/School/Classes/BusAnal/" (23116 1866 371738 967000) "./" "InClass/" "../" "HW2/" "HW3/" "HW5/" "Hoffman-SchwiegBankTheftEstimator.rds" "HW4/" "Project/" "HW1/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

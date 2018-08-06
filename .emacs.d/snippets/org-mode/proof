@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: ORG-LATEX-PROOF
+# key: proof
+# --
+#+BEGIN_EXPORT latex
+\begin{$1}
+$2
+\end{$1}
+\begin{proof}
+$3
+\end{proof}
+#+END_EXPORT

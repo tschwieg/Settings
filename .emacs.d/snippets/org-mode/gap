@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ORG-LATEX-GAP
+# key: gap
+# --
+\vspace{ .33in }
