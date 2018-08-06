@@ -1,1 +1,0 @@
-(define-package "sqlup-mode" "0.8.0" "Upcase SQL words for you" 'nil :commit "04970977b4abb4d44301651618bbf1cdb0b263dd" :url "https://github.com/trevoke/sqlup-mode.el" :keywords '("sql" "tools" "redis" "upcase"))
