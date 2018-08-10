@@ -1,6 +1,30 @@
-((("latex" .
+((("l" .
+   [1])
+  ("message" .
+   [6 0 0 0 0 0 0])
+  ("cdlatex-math-symbol-alist" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("latex" .
    [1 0 0 0 0])
   ("cdlatex" .
    [1 0 0 0 0 0 0])
   ("require" .
+   [1 0 0 0 0 0 0])
+  ("Background" .
+   [0 0 0 1 0 0 0 0 0 1])
+  ("important" .
+   [0 0 0 1 0 0 0 0 0])
+  ("cdlatex-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("setq" .
+   [1 0 0 0])
+  ("nil" .
+   [1 0 0])
+  ("fill-paragraph" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("local-set-key" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("kbd" .
+   [1 0 0])
+  ("newline" .
    [1 0 0 0 0 0 0])))

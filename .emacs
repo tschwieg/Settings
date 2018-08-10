@@ -44,7 +44,6 @@
 (require 'auto-complete)
 (ac-config-default)
 (ac-flyspell-workaround)
-(icy-mode 1)
 (pdf-tools-install)
 
 (save-place-mode 1)
@@ -108,7 +107,7 @@
                  ("begin" "$1" "$" "$$" "\\(" "\\[" "#+BEGIN_EXPORT latex"))))
  '(package-selected-packages
    (quote
-    (solarized-theme orgnoter org interleave org-noter preview-latex preview-mode ess noweb-mode noweb-mdoe no-web-mode polymode org-mode auto-complete julia-mode pyenv-mode font-lock-studio)))
+    (bookmark solarized-theme orgnoter org interleave org-noter preview-latex preview-mode ess noweb-mode noweb-mdoe no-web-mode polymode org-mode auto-complete julia-mode pyenv-mode font-lock-studio)))
  '(python-shell-interpreter "python")
  '(sp-highlight-pair-overlay nil)
  '(sp-highlight-wrap-overlay nil)
@@ -123,7 +122,8 @@
  '(company-tooltip ((t (:background "#00222c" :foreground "light grey"))))
  '(company-tooltip-annotation ((t (:foreground "white"))))
  '(company-tooltip-common ((t (:foreground "light grey"))))
- '(company-tooltip-selection ((t (:background "SteelBlue4")))))
+ '(company-tooltip-selection ((t (:background "SteelBlue4"))))
+ '(org-latex-and-related ((t (:foreground "#6c71c4")))))
 
 
 (require 'highlight-symbol)
@@ -189,7 +189,7 @@
 	    (rainbow-delimiters-mode)
 	    (require 'smartparens-config)
             (unless (equal major-mode 'pdf-view-mode) 
-               (linum-mode 1))
+               (display-line-numbers-mode))
 	    (smartparens-mode)))
 
 ;(global-linum-mode 1)
@@ -315,7 +315,6 @@
 
 (show-paren-mode 1)
 
-
 (add-hook 'LaTeX-mode-hook
 	  (lambda ()
 	    (latex-extra-mode)
@@ -323,9 +322,9 @@
 	  (setq-local company-backends
               (append '((company-math-symbols-latex company-latex-commands))
                       company-backends))
-	    ;; (require 'flyspell )
+	    (require 'flyspell )
 	    ;; (setq ispell-program-name "ispell") ; could be ispell as well, depending on your preferences
-	    ;; (setq ispell-dictionary "en_US") ; this can obviously be set to any language your spell-checking program supports
+	    (setq ispell-dictionary "en_US") ; this can obviously be set to any language your spell-checking program supports
 	    (setq reftex-plug-into-AUCTeX t)
 	    (setq TeX-auto-save t)
 	    (setq TeX-parse-self t)
@@ -336,17 +335,20 @@
 	    ;; (setq whitespace-style '(face tabs lines-tail trailing))
 	    ;; (whitespace-mode)
             ;; (add-to-list 'ispell-skip-region-alist ("^<<" . "^@"))
-	    ;; (flyspell-mode)
+	    (flyspell-mode)
 	    (setq reftex-plug-into-AUCTeX t)
-	    ;(flyspell-buffer)
+	    (flyspell-buffer)
 	    (TeX-global-PDF-mode t)
 	   ; (local-set-key [tab] 'TeX-complete-symbol)
-	    (LaTeX-math-mode)
+	    ;(LaTeX-math-mode)
 	    (outline-minor-mode)
 	    (setq TeX-error-overview-open-after-TeX-run t )
 	    (prettify-symbols-mode)
-            (LaTeX-command "latex -shell-escape")
-            (local-set-key (kbd "<tab>") 'completion-at-point)))
+            (display-line-numbers-mode)
+            (cdlatex-mode)
+            (modify-syntax-entry ?_ "w" )
+            (modify-syntax-entry ?^ "w" ) ))
+            ;;(local-set-key (kbd "<tab>") 'completion-at-point)))
 	    ;(purpose-load-window-layout "RLayout")))
 
 
@@ -355,11 +357,7 @@
             (auto-complete-mode 1)
 	    (local-set-key (kbd "<tab>") 'julia-latexsub-or-indent)))
 
-(require 'cl-lib)
-(defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
-  "Prevent annoying \"Active processes exist\" query when you quit Emacs."
-  (cl-letf (((symbol-function #'process-list) (lambda ())))
-    ad-do-it))
+(setq confirm-kill-processes nil )
 
 
 (delete-selection-mode 1)
@@ -413,7 +411,6 @@ point reaches the beginning or end of the buffer, stop there."
   '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
 
 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images)   
-(add-hook 'org-mode-hook 'org-display-inline-images)
 
 
 (org-babel-do-load-languages
@@ -436,7 +433,18 @@ point reaches the beginning or end of the buffer, stop there."
   ;;(setq org-latex-pdf-process '("texi2dvi -p -b -V %f"))
 ) 
  
-(add-hook 'org-mode-hook 'org-mode-reftex-setup) 
+
+(add-hook 'org-mode-hook
+	  (lambda ()
+            (org-display-inline-images)
+            (org-mode-reftex-setup)
+	    (require 'flyspell )
+	    ;; (setq ispell-program-name "ispell") ; could be ispell as well, depending on your preferences
+	    (setq ispell-dictionary "en_US") ; this can obviously be set to any language your sp
+	    (flyspell-mode)
+	    (flyspell-buffer)
+
+            (display-line-numbers-mode) ))
 
 (require 'org-ref)
 
@@ -469,13 +477,25 @@ point reaches the beginning or end of the buffer, stop there."
 (require 'cdlatex)
 
 (add-hook 'org-mode-hook 'turn-on-org-cdlatex)
+(add-hook 'org-mode-hook 'display-line-numbers-mode)
+(setq org-src-window-setup 'current-window)
 
 
 (add-to-list 'cdlatex-math-modify-alist
              '(98 "\\bm" "\\textbf" t nil nil))
 
+(setq cdlatex-math-symbol-alist
+      '((?- ("\\cap" "\\leftrightarrow" "\\longleftrightarrow" "\\Longleftrightarrow"))))
+
+(add-to-list 'cdlatex-math-symbol-alist
+             '([-] "\\cap" nil t nil nil))
+
 (add-to-list 'cdlatex-math-modify-alist
-             '(115 "\\mathbb" nil t nil nil))
+             '(115 "\\seq" nil t nil nil))
+
+(add-to-list 'cdlatex-math-modify-alist
+             '(118 "\\vec" nil t nil nil))
+
 (cdlatex-reset-mode)
 
 (setq org-latex-minted-options '(
@@ -500,3 +520,9 @@ point reaches the beginning or end of the buffer, stop there."
 
 (set-fill-column 80)
 (setq tramp-default-method "sshx")
+
+(add-hook 'pdf-view-mode-hook 'pdf-view-midnight-minor-mode)
+
+
+(turn-on-auto-fill)
+

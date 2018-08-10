@@ -1224,6 +1224,7 @@ constant `cdlatex-math-modify-alist'."
 	  (goto-char end)
 	  (point-to-register ?x)
 	  (goto-char beg)
+          (message "Using active region")
 	  (insert "{")
 	  (if acc (forward-char -1))
 	  (insert cmd)
@@ -1233,6 +1234,7 @@ constant `cdlatex-math-modify-alist'."
        (arg
 	(point-to-register ?x)
 	(backward-word arg)
+        (message "Using backward-word")
 	(insert "{")
 	(if acc (forward-char -1))
 	(insert cmd)
@@ -1251,38 +1253,51 @@ constant `cdlatex-math-modify-alist'."
 	(search-backward "?")
 	(delete-char 1))
        (t
-        ;; Modify preceding character or word
         (point-to-register ?x)
-        (if (= (preceding-char) ?\})
-            ;; its a group
-            (progn (setq extrabrac nil)
-                   (backward-list 1)
-                   (if (not acc) (forward-char 1)))
-          ;; not a group
-          (forward-char -1)
-          (if (looking-at "[a-zA-Z]")
-              ;; a character: look if word or macro
-              (progn
-                (setq extrabrac t)
-                (re-search-backward "[^a-zA-Z]")
-		(cond
-		 ((= (following-char) ?\\))
-		 ((not inside-math) (forward-char 1))
-		 (t (register-to-point ?x)
-		    (forward-char -1)
-		    (if (and rmdot (looking-at "[ij]"))
-			(progn (insert "\\")
-			       (forward-char 1)
-			       (insert "math")
-			       (point-to-register ?x)
-			       (forward-char -6))))))
-            (setq extrabrac t)))
-        (if extrabrac (progn (insert "{")
-                             (if acc (forward-char -1))))
-        (insert cmd)
-        (if (not acc) (insert " "))
-        (register-to-point ?x)
-        (if extrabrac (insert "}")))))))
+	(backward-word arg)
+        (message "Using backward-word")
+	(insert "{")
+	(if acc (forward-char -1))
+	(insert cmd)
+	(if (not acc) (insert " "))
+	(register-to-point ?x)
+	(insert "}"))
+        ;; (message "On the other side of the if")
+        ;; ;; Modify preceding character or word
+        ;; (point-to-register ?x)
+        ;; (if (= (preceding-char) ?\})
+        ;;     ;; its a group
+        ;;     (progn (setq extrabrac nil)
+        ;;            (backward-list 1)
+        ;;            (if (not acc) (forward-char 1)))
+        ;;   ;; not a group
+        ;;   (forward-char -1)
+        ;;   (if (looking-at "[a-zA-Z_]")
+        ;;       (message "Searching if word or macro")
+        ;;       ;; a character: look if word or macro
+        ;;       (progn
+        ;;         (setq extrabrac t)
+        ;;         (re-search-backward "[^a-zA-Z_]")
+	;; 	(cond
+	;; 	 ((= (following-char) ?\\))
+	;; 	 ((not inside-math) (forward-char 1))
+	;; 	 (t (register-to-point ?x)
+        ;;             (message "looking at word I think")
+	;; 	    (forward-char -1)
+	;; 	    (if (and rmdot (looking-at "[ij]"))
+	;; 		(progn (insert "\\")
+	;; 		       (forward-char 1)
+	;; 		       (insert "math")
+	;; 		       (point-to-register ?x)
+	;; 		       (forward-char -6))))))
+        ;;     (setq extrabrac t)))
+        ;; (if extrabrac (progn (insert "{")
+        ;;                      (if acc (forward-char -1))))
+        ;; (insert cmd)
+        ;; (if (not acc) (insert " "))
+        ;; (register-to-point ?x)
+        ;; (if extrabrac (insert "}")))
+       ))))
 
 ;;; And here is the help function for the symbol insertions stuff
 

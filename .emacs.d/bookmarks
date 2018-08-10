@@ -1,0 +1,13 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("PDF-LAST-VIEWED: /home/tschwieg/Notes/Rudin-Analysis/Rudin.pdf"
+ (filename . "~/Notes/Rudin-Analysis/Rudin.pdf")
+ (position . 1)
+ (page . 47)
+ (slice)
+ (size . fit-width)
+ (origin)
+ (handler . pdf-view-bookmark-jump-handler))
+)
