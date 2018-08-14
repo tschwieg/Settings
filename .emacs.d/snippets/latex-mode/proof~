@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: LATEX-PROOF
+# key: proof
+# --
+\begin{theorem}
+%$1
+\label{thr:$2}
+$3
+\end{theorem}
+\begin{proof}
+$4
+\end{proof}

@@ -736,7 +736,8 @@ Entering cdlatex-mode calls the hook cdlatex-mode-hook.
 (defun cdlatex-ensure-math ()
   ;; Make sure we are in math
   (unless (texmathp)
-    (cdlatex-dollar)))
+      (cdlatex-dollar)))
+  
 
 (defun cdlatex-dollar (&optional arg)
   "Insert a pair of dollars unless number of backslashes before point is odd.
@@ -1015,8 +1016,13 @@ the template.  This is mainly useful for \"items\" of environments, where
 
     ;; Position cursor at the first question-mark
     (goto-char begpos)
+    
     (if (search-forward "?" (marker-position endmarker) t)
-	(backward-delete-char 1))))
+	(backward-delete-char 1)))
+
+  
+  (LaTeX-fill-environment nil)
+  (deactivate-mark))
 
 (defun cdlatex-item ()
   "Insert an \\item and provide a label if the environments supports that.
@@ -1233,7 +1239,7 @@ constant `cdlatex-math-modify-alist'."
 	  (insert "}")))
        (arg
 	(point-to-register ?x)
-	(backward-word arg)
+	(backward-sexp arg)
         (message "Using backward-word")
 	(insert "{")
 	(if acc (forward-char -1))
@@ -1254,8 +1260,12 @@ constant `cdlatex-math-modify-alist'."
 	(delete-char 1))
        (t
         (point-to-register ?x)
-	(backward-word arg)
-        (message "Using backward-word")
+	;;(backward-sexp arg)
+        (search-backward-regexp "[ $]\\|[^_^]{")
+        (forward-char)
+        (message (string (char-after)))
+        (if (string= (string (char-after)) "{")  (forward-char) )
+        (message arg)
 	(insert "{")
 	(if acc (forward-char -1))
 	(insert cmd)
@@ -2117,11 +2127,11 @@ these variables via `cdlatex-add-to-label-alist'."
 ;;; Keybindings --------------------------------------------------------------
 
 (define-key cdlatex-mode-map  "$"         'cdlatex-dollar)
-(define-key cdlatex-mode-map  "("         'cdlatex-pbb)
-(define-key cdlatex-mode-map  "{"         'cdlatex-pbb)
-(define-key cdlatex-mode-map  "["         'cdlatex-pbb)
-(define-key cdlatex-mode-map  "|"         'cdlatex-pbb)
-(define-key cdlatex-mode-map  "<"         'cdlatex-pbb)
+;; (define-key cdlatex-mode-map  "("         'cdlatex-pbb)
+;; (define-key cdlatex-mode-map  "{"         'cdlatex-pbb)
+;; (define-key cdlatex-mode-map  "["         'cdlatex-pbb)
+;; (define-key cdlatex-mode-map  "|"         'cdlatex-pbb)
+;; (define-key cdlatex-mode-map  "<"         'cdlatex-pbb)
 (define-key cdlatex-mode-map  "^"         'cdlatex-sub-superscript)
 (define-key cdlatex-mode-map  "_"         'cdlatex-sub-superscript)
 

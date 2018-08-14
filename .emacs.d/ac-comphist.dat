@@ -1,30 +1,142 @@
-((("l" .
-   [1])
-  ("message" .
-   [6 0 0 0 0 0 0])
-  ("cdlatex-math-symbol-alist" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("latex" .
+((("LaTeX" .
+   [0 0 0 0 1])
+  ("forward-char" .
+   [0 0 0 0 0 0 0 0 0 0 2 0])
+  ("search-backward-regexp" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("backward-sexp" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("string" .
+   [2 0 0 0 1 0])
+  ("progn" .
+   [4 0 0 0 0])
+  ("lambda" .
+   [1 0 0 0 0 0])
+  ("mess" .
+   [1 0 0 0])
+  ("regexp-quote" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("string-match-p" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("forward-sexp" .
+   [0 0 0 0 0 0 0 0 0 0 1 0])
+  ("local" .
    [1 0 0 0 0])
-  ("cdlatex" .
+  ("global" .
+   [1 0 0 0 0 0])
+  ("my-LaTeX-item-list" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("defun" .
+   [1 0 0 0 0])
+  ("GenerateTheoremLabel" .
+   [0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0])
+  ("if" .
+   [3 0])
+  ("envText" .
+   [1 0 0 0 1 0 0])
+  ("string=" .
    [1 0 0 0 0 0 0])
-  ("require" .
+  ("point" .
+   [3 0 0 0 0])
+  ("t" .
+   [1])
+  ("g" .
+   [1])
+  ("theoremNum" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("concat" .
+   [3 0 0 0 0 0])
+  ("labelNum" .
+   [2 0 0 0 0 0 1 0])
+  ("insert" .
+   [2 0 0 0 0 0])
+  ("goto-char" .
+   [3 0 0 0 0 0 0 0 0])
+  ("m" .
+   [1])
+  ("match-end" .
+   [1 0 0 0 0 0 0 0 0])
+  ("pos" .
+   [1 0 0])
+  ("while" .
+   [1 0 0 0 0])
+  ("testString" .
+   [1 0 0 0 0 1 2 0 0 1])
+  ("number-to-string" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("string-to-number" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("lastNum" .
+   [1 0 0 0 0 2 0])
+  ("enumText" .
+   [1 0 0 0 2 1 0 0])
+  ("e" .
+   [1])
+  ("interactive" .
+   [1 0 0 0 0 0 0 0 0 1 0])
+  ("s" .
+   [1])
+  ("match-string" .
+   [2 0 0 0 0 0 0 0 0 0 0 2])
+  ("list" .
+   [1 0 0 0])
+  ("parText" .
+   [0 0 0 1 5 0 0])
+  ("string-match" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("when" .
+   [1 0 0 0])
+  ("enumPos" .
+   [2 0 0 0 0 2 2])
+  ("parPos" .
+   [2 0 0 0 0 0])
+  ("buffer-substring" .
+   [1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 3])
+  ("startPos" .
+   [1 0 0 0 0 0 2 1])
+  ("move-marker" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("skip-chars-forward" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("point-marker" .
+   [0 0 0 0 0 0 0 0 0 0 1 0])
+  ("env" .
+   [1 0 0])
+  ("LaTeX-fill-environment" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("LaTeX-fill-buffer" .
+   [1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("newline" .
    [1 0 0 0 0 0 0])
-  ("Background" .
-   [0 0 0 1 0 0 0 0 0 1])
-  ("important" .
-   [0 0 0 1 0 0 0 0 0])
+  ("kbd" .
+   [2 0 0])
+  ("local-set-key" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("fill-paragraph" .
+   [0 0 0 0 0 0 0 0 0 2 0 0 0 0])
+  ("nil" .
+   [3 0 0])
+  ("setq" .
+   [16 0 0 0])
   ("cdlatex-mode" .
    [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("setq" .
-   [1 0 0 0])
-  ("nil" .
-   [1 0 0])
-  ("fill-paragraph" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("local-set-key" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("kbd" .
-   [1 0 0])
-  ("newline" .
-   [1 0 0 0 0 0 0])))
+  ("important" .
+   [0 0 0 1 0 0 0 0 0])
+  ("Background" .
+   [0 0 0 1 0 0 0 0 0 1])
+  ("require" .
+   [1 0 0 0 0 0 1])
+  ("cdlatex" .
+   [1 0 0 0 0 0 0])
+  ("latex" .
+   [1 0 0 0 0])
+  ("cdlatex-math-symbol-alist" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("message" .
+   [26 0 0 0 0 0 1])
+  ("l" .
+   [1])
+  ("smartparens-config" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("char-after" .
+   [2 0 0 0 0 0 0 0 0 0])))

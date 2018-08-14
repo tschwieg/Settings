@@ -131,6 +131,7 @@ ID, ACTION, CONTEXT."
   (sp-local-pair "{" "}")
   (sp-local-pair "(" ")")
   (sp-local-pair "[" "]")
+  (sp-local-pair "(" ")")
 
   ;; pairs for big brackets.  Needs more research on what pairs are
   ;; useful to add here.  Post suggestions if you know some.

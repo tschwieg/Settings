@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- backward-word
- LaTeX-math-preceq
+ magit-status
+ LaTeX-fill-environment
+ font-lock-fontify-buffer
+ smartparens-strict-mode
  cdlatex-mode
- LaTeX-mode
- helm-major-mode
- backward-sexp
- backward-list
+ smartparens-mode
+ insert-parentheses
 )
 
 ;; ----- smex-data -----
@@ -15,7 +15,7 @@
  (preview-buffer . 1)
  (preview-section . 1)
  (preview-at-point . 1)
- (cdlatex-mode . 5)
+ (cdlatex-mode . 13)
  (display-line-numbers-mode . 4)
  (fill-paragraph . 4)
  (line-number-mode . 2)
@@ -23,11 +23,37 @@
  (cdlatex-customize . 1)
  (cdlatex-command-help . 2)
  (magit-init . 1)
- (magit-status . 1)
- (backward-word . 6)
- (backward-list . 1)
- (backward-sexp . 2)
+ (magit-status . 4)
+ (backward-word . 7)
+ (backward-list . 2)
+ (backward-sexp . 6)
  (helm-major-mode . 1)
  (LaTeX-mode . 1)
  (LaTeX-math-preceq . 1)
+ (flyspell-mode . 2)
+ (flyspell-buffer . 3)
+ (fill-region . 2)
+ (LaTeX-fill-buffer . 9)
+ (LaTeX-fill-environment . 34)
+ (forward-word . 3)
+ (mark-word . 1)
+ (reftex-reference . 3)
+ (font-lock-fontify-buffer . 9)
+ (reftex-label . 7)
+ (reftex-toc . 3)
+ (LaTeX-find-matching-begin . 16)
+ (forward-sexp . 3)
+ (table-justify-column . 1)
+ (ido-mode . 1)
+ (testFun . 43)
+ (GenerateTheoremLabel . 43)
+ (my-LaTeX-item-list . 7)
+ (julia . 1)
+ (backward-to-word . 1)
+ (search-backward . 1)
+ (search-backward-regexp . 2)
+ (smartparens-strict-mode . 10)
+ (turn-on-smartparens-mode . 1)
+ (smartparens-mode . 10)
+ (insert-parentheses . 2)
 )

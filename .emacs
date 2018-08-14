@@ -41,6 +41,11 @@
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 (define-key yas-minor-mode-map (kbd "<C-tab>") 'yas-expand)
 
+(eval-after-load 'yasnippet
+  '(progn
+     (define-key yas-keymap (kbd "TAB") nil)
+     (define-key yas-keymap (kbd "<C-tab>") 'yas-next-field-or-maybe-expand)))
+
 (require 'auto-complete)
 (ac-config-default)
 (ac-flyspell-workaround)
@@ -70,6 +75,7 @@
      (output-dvi "xdvi")
      (output-pdf "Evince")
      (output-html "xdg-open"))))
+ '(cdlatex-paired-parens "$[{(")
  '(custom-enabled-themes (quote (solarized-dark)))
  '(custom-safe-themes
    (quote
@@ -182,15 +188,17 @@
                "\\)"))
    1 font-lock-type-face)))
 
+(require 'smartparens-config)
+
 (add-hook 'prog-mode-hook
           (lambda ()
             (font-lock-add-keywords nil
                                     '(("\\<\\(NOTE\\|FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))
 	    (rainbow-delimiters-mode)
-	    (require 'smartparens-config)
+	    (smartparens-mode)
             (unless (equal major-mode 'pdf-view-mode) 
                (display-line-numbers-mode))
-	    (smartparens-mode)))
+	    ))
 
 ;(global-linum-mode 1)
 
@@ -315,11 +323,63 @@
 
 (show-paren-mode 1)
 
+(defun GenerateTheoremLabel()
+  (interactive)
+  (setq m (point-marker))
+  (setq  startPos (point))
+  ;; set cursor at start.
+  (LaTeX-find-matching-begin)
+  (setq  enumPos (point))
+
+  (forward-sexp)
+  (forward-sexp)
+  (if (string-match-p (regexp-quote "\\begin{enumerate}") (buffer-substring enumPos (point)))
+      (progn
+        (goto-char enumPos)
+        ;; Set cursor at enumerate
+        (LaTeX-find-matching-begin)
+        (setq parPos (point))
+
+        (forward-sexp)
+        (forward-sexp)
+        (setq envText (buffer-substring parPos (point)))
+
+                                        ;(message envText)
+        (goto-char startPos)
+        (if (string-match-p (regexp-quote "\\begin{document}") envText)
+            (message "Not in nested Enviornment")
+          
+          (setq parText (buffer-substring parPos enumPos))
+                                        ;(message parText)
+          (when (string-match "\\\\label{[a-zA-Z]+:\\([0-9]+\\.[0-9]+\\)}" parText )
+            ;; (list (match-string 0 parText)
+            ;;       (match-string 1 parText))
+            (setq theoremNum (match-string 1 parText))
+
+            (setq enumText ( buffer-substring enumPos startPos))
+            (setq testString "1")
+            (setq pos 0)
+            (while (string-match "\\\\label{item:[0-9]+\\.[0-9]+\\.\\([0-9]+\\)}" enumText pos )
+              (setq testString (number-to-string (1+ (string-to-number (match-string 1 enumText)))))
+              (setq pos (match-end 0)))
+                                        ;(message (number-to-string lastNum))
+            
+            (setq labelNum (concat  theoremNum "." testString))
+                                        ;(message labelNum)
+            (delete-char -1)
+            (insert (concat "\\label{item:" labelNum "} ")))))
+    (goto-char startPos)))
+
+(defun my-LaTeX-item-list()
+    (interactive)
+    (LaTeX-insert-item)
+    (GenerateTheoremLabel))
+
 (add-hook 'LaTeX-mode-hook
 	  (lambda ()
 	    (latex-extra-mode)
 	    (company-auctex-init)
-	  (setq-local company-backends
+	    (setq-local company-backends
               (append '((company-math-symbols-latex company-latex-commands))
                       company-backends))
 	    (require 'flyspell )
@@ -329,27 +389,32 @@
 	    (setq TeX-auto-save t)
 	    (setq TeX-parse-self t)
 	    (setq TeX-save-query nil)
-	    ;; (require 'whitespace)
-	    ;; ;(setq whitespace-line-column 80 )
-	    ;; (set-fill-column 80)
-	    ;; (setq whitespace-style '(face tabs lines-tail trailing))
-	    ;; (whitespace-mode)
-            ;; (add-to-list 'ispell-skip-region-alist ("^<<" . "^@"))
 	    (flyspell-mode)
 	    (setq reftex-plug-into-AUCTeX t)
 	    (flyspell-buffer)
 	    (TeX-global-PDF-mode t)
-	   ; (local-set-key [tab] 'TeX-complete-symbol)
-	    ;(LaTeX-math-mode)
 	    (outline-minor-mode)
 	    (setq TeX-error-overview-open-after-TeX-run t )
 	    (prettify-symbols-mode)
             (display-line-numbers-mode)
+            
+            (turn-on-auto-fill)
+            
+                                        ;(local-set-key (kbd "C-c j") 'my-LaTeX-item-list)
+            (smartparens-mode)
             (cdlatex-mode)
-            (modify-syntax-entry ?_ "w" )
-            (modify-syntax-entry ?^ "w" ) ))
-            ;;(local-set-key (kbd "<tab>") 'completion-at-point)))
-	    ;(purpose-load-window-layout "RLayout")))
+            (setq reftex-label-alist
+                  '(("theorem" ?h "thr:" "~\\ref{%s}" t   ("Theorem" "theorem") -3)))
+
+            (setq reftex-insert-label-flags '(nil t))
+            (LaTeX-add-environments
+             '("theorem" LaTeX-env-label))
+            (add-to-list 'LaTeX-label-alist '("theorem" . "thr:"))
+            ))
+            ;(modify-syntax-entry ?_ "w" )
+            ;(modify-syntax-entry ?^ "w" ) ))
+
+
 
 
 (add-hook 'ess-julia-mode-hook
