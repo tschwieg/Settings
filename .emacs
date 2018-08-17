@@ -150,7 +150,7 @@
 
 (font-lock-add-keywords
  'ess-julia-mode
- '(("\\<\\([A-Za-z_]+\\)\\>("
+ '(("\\<\\([A-Za-z_!]+\\)\\>("
     1 font-lock-function-name-face)))
 
 
@@ -206,12 +206,6 @@
 
 (setq ess-ask-for-ess-directory nil)
 
-(defun my-company-r-hook(x)
-  (when x
-  (setq company-r-window (selected-window))
-  (ess-display-help-on-object x)
-  (select-window company-r-window)))
-
 (setq ac-auto-show-menu nil)
 (setq ac-use-quick-help nil)
 (define-key ac-completing-map "\t" 'ac-complete)
@@ -229,12 +223,6 @@
 
 (add-hook 'ess-mode-hook
 	  (lambda ()
-	    (linum-on)
-	    ;; (require 'whitespace)
-	    ;; (setq whitespace-line-column 80 )
-	    ;; 
-	    ;; (setq whitespace-style '(face tabs lines-tail trailing))
-	    ;; (whitespace-mode)
 	    (setq flycheck-lintr-caching nil)
 	    ;(purpose-load-window-layout "RLayout")
 	    ;(ess-load-file "~/.emacsPrinter.r")
@@ -253,41 +241,6 @@
 (require 'eval-in-repl)
 (require 'eval-in-repl-python)
 
-(defun EvaluateWholeFunction()
-  "This sends the entire buffer to the REPL Process"
-  (interactive)
-  (mark-whole-buffer)
-  (eir-eval-in-python))
-
-
-(global-company-mode)
-(setq company-minimum-prefix-length 2 )
-(setq company-idle-delay 60)
-(define-key company-mode-map (kbd "<backtab>") 'company-complete)
-;(global-set-key (kbd "<tab>") 'completion-at-point)
-(setq completion-cycle-threshold t)
-(require 'company-statistics)
-(company-statistics-mode)
-
-(defun company-down-view-doc()
-(interactive)
-(company-select-next-or-abort)
-(company-show-doc-buffer))
-
-(defun company-up-view-doc()
-(interactive)
-(company-select-previous-or-abort)
-(company-show-doc-buffer))
-
-
-
-
-(define-key company-active-map (kbd "<return>" ) nil )
-(define-key company-active-map (kbd "RET" ) nil )
-(define-key company-active-map (kbd "<tab>" ) 'company-complete-selection )
-(define-key company-active-map (kbd "<backtab>" ) 'company-show-doc-buffer )
-(define-key company-active-map (kbd "<down>" ) 'company-down-view-doc )
-(define-key company-active-map (kbd "<up>" ) 'company-up-view-doc )
 
 (defun my-company-python-hook(x)
   (when x 
@@ -301,19 +254,11 @@
 		    (require 'py-autopep8)
 		    (require 'eval-in-repl-python)
 		    (require 'jedi-core)
-		    (require 'company-jedi)
 		    (load-library "realgud")
-		    (add-to-list 'company-backends 'company-jedi)
-		    ;(setq python-shell-interpreter "python3")
-		    (require 'whitespace)
-		    (setq whitespace-line-column 80 )
 		    (set-fill-column 80)
-		    (setq whitespace-style '(face tabs lines-tail trailing))
-		    (whitespace-mode)
 		    (setq eir-ielm-eval-in-current-buffer t)
 		    (setq py-keep-windows-configuration t )
 		    (setq py-split-window-on-execute nil )
-		    (add-hook 'company-completion-finished-hook 'my-company-python-hook )
 		    (py-autopep8-enable-on-save)
 ;		    (jedi:setup)
 		    (local-set-key (kbd "<C-iso-lefttab>") 'jedi:show-doc)
@@ -323,65 +268,61 @@
 
 (show-paren-mode 1)
 
-(defun GenerateTheoremLabel()
-  (interactive)
-  (setq m (point-marker))
-  (setq  startPos (point))
-  ;; set cursor at start.
-  (LaTeX-find-matching-begin)
-  (setq  enumPos (point))
+;; (defun GenerateTheoremLabel()
+;;   (interactive)
+;;   (setq m (point-marker))
+;;   (setq  startPos (point))
+;;   ;; set cursor at start.
+;;   (LaTeX-find-matching-begin)
+;;   (setq  enumPos (point))
 
-  (forward-sexp)
-  (forward-sexp)
-  (if (string-match-p (regexp-quote "\\begin{enumerate}") (buffer-substring enumPos (point)))
-      (progn
-        (goto-char enumPos)
-        ;; Set cursor at enumerate
-        (LaTeX-find-matching-begin)
-        (setq parPos (point))
+;;   (forward-sexp)
+;;   (forward-sexp)
+;;   (if (string-match-p (regexp-quote "\\begin{enumerate}") (buffer-substring enumPos (point)))
+;;       (progn
+;;         (goto-char enumPos)
+;;         ;; Set cursor at enumerate
+;;         (LaTeX-find-matching-begin)
+;;         (setq parPos (point))
 
-        (forward-sexp)
-        (forward-sexp)
-        (setq envText (buffer-substring parPos (point)))
+;;         (forward-sexp)
+;;         (forward-sexp)
+;;         (setq envText (buffer-substring parPos (point)))
 
-                                        ;(message envText)
-        (goto-char startPos)
-        (if (string-match-p (regexp-quote "\\begin{document}") envText)
-            (message "Not in nested Enviornment")
+;;                                         ;(message envText)
+;;         (goto-char startPos)
+;;         (if (string-match-p (regexp-quote "\\begin{document}") envText)
+;;             (message "Not in nested Enviornment")
           
-          (setq parText (buffer-substring parPos enumPos))
-                                        ;(message parText)
-          (when (string-match "\\\\label{[a-zA-Z]+:\\([0-9]+\\.[0-9]+\\)}" parText )
-            ;; (list (match-string 0 parText)
-            ;;       (match-string 1 parText))
-            (setq theoremNum (match-string 1 parText))
+;;           (setq parText (buffer-substring parPos enumPos))
+;;                                         ;(message parText)
+;;           (when (string-match "\\\\label{[a-zA-Z]+:\\([0-9]+\\.[0-9]+\\)}" parText )
+;;             ;; (list (match-string 0 parText)
+;;             ;;       (match-string 1 parText))
+;;             (setq theoremNum (match-string 1 parText))
 
-            (setq enumText ( buffer-substring enumPos startPos))
-            (setq testString "1")
-            (setq pos 0)
-            (while (string-match "\\\\label{item:[0-9]+\\.[0-9]+\\.\\([0-9]+\\)}" enumText pos )
-              (setq testString (number-to-string (1+ (string-to-number (match-string 1 enumText)))))
-              (setq pos (match-end 0)))
-                                        ;(message (number-to-string lastNum))
+;;             (setq enumText ( buffer-substring enumPos startPos))
+;;             (setq testString "1")
+;;             (setq pos 0)
+;;             (while (string-match "\\\\label{item:[0-9]+\\.[0-9]+\\.\\([0-9]+\\)}" enumText pos )
+;;               (setq testString (number-to-string (1+ (string-to-number (match-string 1 enumText)))))
+;;               (setq pos (match-end 0)))
+;;                                         ;(message (number-to-string lastNum))
             
-            (setq labelNum (concat  theoremNum "." testString))
-                                        ;(message labelNum)
-            (delete-char -1)
-            (insert (concat "\\label{item:" labelNum "} ")))))
-    (goto-char startPos)))
+;;             (setq labelNum (concat  theoremNum "." testString))
+;;                                         ;(message labelNum)
+;;             (delete-char -1)
+;;             (insert (concat "\\label{item:" labelNum "} ")))))
+;;     (goto-char startPos)))
 
-(defun my-LaTeX-item-list()
-    (interactive)
-    (LaTeX-insert-item)
-    (GenerateTheoremLabel))
+;; (defun my-LaTeX-item-list()
+;;     (interactive)
+;;     (LaTeX-insert-item)
+;;     (GenerateTheoremLabel))
 
 (add-hook 'LaTeX-mode-hook
 	  (lambda ()
 	    (latex-extra-mode)
-	    (company-auctex-init)
-	    (setq-local company-backends
-              (append '((company-math-symbols-latex company-latex-commands))
-                      company-backends))
 	    (require 'flyspell )
 	    ;; (setq ispell-program-name "ispell") ; could be ispell as well, depending on your preferences
 	    (setq ispell-dictionary "en_US") ; this can obviously be set to any language your spell-checking program supports

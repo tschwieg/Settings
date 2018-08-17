@@ -121,8 +121,6 @@
   '(
    ))
 
-(define-abbrev-table 'select-tags-table-mode-abbrev-table '())
-
 (define-abbrev-table 'shell-mode-abbrev-table '())
 
 (define-abbrev-table 'snippet-mode-abbrev-table '())
@@ -144,6 +142,4 @@
 (define-abbrev-table 'vc-git-log-view-mode-abbrev-table '())
 
 (define-abbrev-table 'vc-git-region-history-mode-abbrev-table '())
-
-(define-abbrev-table 'xref--xref-buffer-mode-abbrev-table '())
 

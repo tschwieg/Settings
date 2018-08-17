@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- magit-status
+ scroll-lock-mode
  LaTeX-fill-environment
+ magit-status
  font-lock-fontify-buffer
  smartparens-strict-mode
  cdlatex-mode
  smartparens-mode
- insert-parentheses
 )
 
 ;; ----- smex-data -----
@@ -34,7 +34,7 @@
  (flyspell-buffer . 3)
  (fill-region . 2)
  (LaTeX-fill-buffer . 9)
- (LaTeX-fill-environment . 34)
+ (LaTeX-fill-environment . 38)
  (forward-word . 3)
  (mark-word . 1)
  (reftex-reference . 3)
@@ -56,4 +56,5 @@
  (turn-on-smartparens-mode . 1)
  (smartparens-mode . 10)
  (insert-parentheses . 2)
+ (scroll-lock-mode . 2)
 )
